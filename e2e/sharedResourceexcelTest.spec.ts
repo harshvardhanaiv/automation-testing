@@ -52,7 +52,7 @@ test.describe('AIV Login and Create MySQL', () => {
       await page3.locator('div').filter({ hasText: /^Excel$/ }).locator('div').nth(2).click();
   await page3.getByRole('treeitem', { name: 'Education_1 master data.xlsx', exact: true }).getByRole('listitem').click();
 await page3.getByRole('listitem').filter({ hasText: 'Output Columns' }).locator('span').first().click();
-await page3.waitForTimeout(1000);
+await page3.waitForTimeout(5000);
   await page3.getByRole('listitem').filter({ hasText: 'Preview' }).locator('span').first().click();
   await page3.getByRole('textbox', { name: 'Dataset Name' }).click();
   await page3.getByRole('textbox', { name: 'Dataset Name' }).fill('ExistingFileexcel');
